@@ -40,7 +40,7 @@ describe("When a page is created", () => {
   })
   it("a footer is displayed", () => {
     render(<Home />);
-    expect(screen.getByText("Contactez-nous")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 3, name: "Contactez-nous" })).toBeInTheDocument();
     expect(screen.getByText("45 avenue de la République, 75000 Paris")).toBeInTheDocument();
   })
   it("an event card, with the last event, is displayed", () => {
